@@ -18,9 +18,6 @@ namespace SchenduleApp.Views
             NavigationPage.SetHasBackButton(this, true);
             NavigationPage.SetBackButtonTitle(this, "Back");
             InitializeComponent();
-
-          
-
         }
 
         private void ScrollView_Scrolled()
