@@ -3,15 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             x:Class="SchenduleApp.Views.Login"
-             Title="Login"
-             NavigationPage.BackButtonTitle=""
+             x:Class="SchenduleApp.Views.Login"            
              >
-    <ContentPage.Content>
-        <ScrollView BackgroundColor="#FFFFFF">            
-            <StackLayout Padding="20,20,20,20">
-                <StackLayout BackgroundColor="Blue">
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem Text="CU" Activated="ToolbarItem_Activated"  />
+    </ContentPage.ToolbarItems>-->
+    <ContentPage.Content>      
+            <StackLayout Padding="20,20,20,20" HorizontalOptions="Center" VerticalOptions="Center">
+                <StackLayout>
                     <Image Source="cartao2.png" 
                            VerticalOptions="Center"                           
                            RelativeLayout.HeightConstraint="50"
@@ -30,20 +29,23 @@
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
                 </Grid>                
-                <StackLayout Grid.Row="0" BackgroundColor="Red">
+                <StackLayout Grid.Row="0">
                     <Entry x:Name="entryEmail" 
                            Placeholder="Email"
-                           PlaceholderColor="#006266"
+                           PlaceholderColor="#006266"                         
+                           ReturnType="Next"
                            />
                     
                 </StackLayout>
-                <StackLayout Grid.Row="1" BackgroundColor="Green">
+                <StackLayout Grid.Row="1">
                     <Entry x:Name="entryPassword" 
                            Placeholder="Senha"
                            PlaceholderColor="#006266"
-                           IsPassword="true"/>
+                           IsPassword="true"
+                           ReturnType="Go"
+                           Completed="SignInProcedure"/>
                 </StackLayout>
-                <StackLayout Grid.Row="2" BackgroundColor="Yellow">
+                <StackLayout Grid.Row="2">
                     <Button x:Name="btnLogin" 
                             Text="Acessar" 
                             HorizontalOptions="Center" 
@@ -54,7 +56,7 @@
                             WidthRequest="350"
                             Clicked="SignInProcedure"/>
                 </StackLayout>
-                <StackLayout Grid.Row="2" BackgroundColor="Beige">
+                <StackLayout Grid.Row="2">
                     <Button x:Name="btnRegister" 
                             Text="Registrar" 
                             HorizontalOptions="Center" 
@@ -65,7 +67,6 @@
                             WidthRequest="350"
                             Clicked="SignUpProcedure"/>
                 </StackLayout>
-            </StackLayout>
-        </ScrollView>
+            </StackLayout>       
     </ContentPage.Content>
 </ContentPage>

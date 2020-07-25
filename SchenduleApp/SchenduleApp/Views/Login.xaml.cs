@@ -14,16 +14,9 @@ namespace SchenduleApp.Views
     public partial class Login : ContentPage
     {
         public Login()
-        {
-            NavigationPage.SetHasBackButton(this, true);
-            NavigationPage.SetBackButtonTitle(this, "Back");
+        {           
             InitializeComponent();
-        }
-
-        private void ScrollView_Scrolled()
-        {
-
-        }
+        }             
 
         void SignInProcedure(object sender, EventArgs e)
         {
@@ -31,9 +24,13 @@ namespace SchenduleApp.Views
         }
 
         void SignUpProcedure(object sender, EventArgs e)
+        {   
+            Navigation.PushAsync(new Register());
+        }
+
+        void ToolbarItem_Activated(object sender, EventArgs e)
         {
-            Application.Current.MainPage.Navigation.InsertPageBefore(new Register(), new Login());
-            Application.Current.MainPage = new NavigationPage(new Register()); 
+            Navigation.PushAsync(new Register());
         }
     }
 }
