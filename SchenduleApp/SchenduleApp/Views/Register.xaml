@@ -1,20 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             NavigationPage.HasBackButton="True"
-             NavigationPage.BackButtonTitle="True"
-             BackgroundColor="Red"
-             x:Class="SchenduleApp.Views.Register" 
-           >
-
-
+             x:Class="SchenduleApp.Views.Register"
+             Title="Cadastro" 
+             >
     <ContentPage.Content>
-         
-        <ScrollView BackgroundColor="#FFFFFF">
-            <StackLayout Padding="20,20,20,20">
+            <StackLayout Padding="20,20,20,20" HorizontalOptions="Center" VerticalOptions="Center">
                 <StackLayout>
                     <Image Source="cartao2.png" 
                            VerticalOptions="Center"                           
@@ -38,14 +29,16 @@
                     <Entry x:Name="entryEmail" 
                            Placeholder="Email"
                            PlaceholderColor="#006266"
-                           />
+                           ReturnType="Next" />
 
                 </StackLayout>
                 <StackLayout Grid.Row="1">
                     <Entry x:Name="entryPassword" 
                            Placeholder="Senha"
                            PlaceholderColor="#006266"
-                           IsPassword="true"/>
+                           IsPassword="true"
+                           ReturnType="Go"
+                           />
                 </StackLayout>               
                 <StackLayout Grid.Row="2">
                     <Button x:Name="btnRegister" 
@@ -55,10 +48,9 @@
                             TextColor="#FFF"
                             FontFamily="Arial"
                             FontSize="Medium"
-                            WidthRequest="350"
-                           />
+                            WidthRequest="350"/>
                 </StackLayout>
             </StackLayout>
-        </ScrollView>
     </ContentPage.Content>
+
 </ContentPage>
