@@ -20,7 +20,8 @@ namespace SchenduleApp.Views
 
         void SignInProcedure(object sender, EventArgs e)
         {
-            DisplayAlert("Login", "Login Sucess", "Ok");
+            Navigation.PushAsync(new MainHomePage());
+            //DisplayAlert("Login", "Login Sucess", "Ok");
         }
 
         void SignUpProcedure(object sender, EventArgs e)

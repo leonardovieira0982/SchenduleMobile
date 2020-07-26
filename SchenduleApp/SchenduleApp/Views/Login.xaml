@@ -10,43 +10,42 @@
     </ContentPage.ToolbarItems>-->
     <ContentPage.Content>      
             <StackLayout Padding="20,20,20,20" HorizontalOptions="Center" VerticalOptions="Center">
-                <StackLayout>
-                    <Image Source="cartao2.png" 
+            <StackLayout>
+                <Image Source="cartao2.png" 
                            VerticalOptions="Center"                           
                            RelativeLayout.HeightConstraint="50"
-                           Margin="0,40,0,0" />                    
-                    <Label Text="Cuidar dos Pés é uma Necessidade"
+                           Margin="0,40,0,0" />
+                <Label Text="Cuidar dos Pés é uma Necessidade"
                        FontSize="Large"
                        FontAttributes="Italic"
                        FontFamily="Calibri"
                        TextColor="#395452"
                        HorizontalOptions="Center"/>
-                </StackLayout>
-                <Grid VerticalOptions="CenterAndExpand">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"  />
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
-                </Grid>                
-                <StackLayout Grid.Row="0">
-                    <Entry x:Name="entryEmail" 
+            </StackLayout>
+            <Grid VerticalOptions="CenterAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"  />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+            </Grid>
+            <StackLayout Grid.Row="0">
+                <Entry x:Name="entryEmail" 
                            Placeholder="Email"
                            PlaceholderColor="#006266"                         
-                           ReturnType="Next"
-                           />
-                    
-                </StackLayout>
-                <StackLayout Grid.Row="1">
-                    <Entry x:Name="entryPassword" 
+                           ReturnType="Next"/>
+
+            </StackLayout>
+            <StackLayout Grid.Row="1">
+                <Entry x:Name="entryPassword" 
                            Placeholder="Senha"
                            PlaceholderColor="#006266"
                            IsPassword="true"
                            ReturnType="Go"
                            Completed="SignInProcedure"/>
-                </StackLayout>
-                <StackLayout Grid.Row="2">
-                    <Button x:Name="btnLogin" 
+            </StackLayout>
+            <StackLayout Grid.Row="2">
+                <Button x:Name="btnLogin" 
                             Text="Acessar" 
                             HorizontalOptions="Center" 
                             BackgroundColor="#1e84d0" 
@@ -55,10 +54,10 @@
                             FontSize="Medium"
                             WidthRequest="350"
                             Clicked="SignInProcedure"/>
-                </StackLayout>
-                <StackLayout Grid.Row="2">
-                    <Button x:Name="btnRegister" 
-                            Text="Registrar" 
+            </StackLayout>
+            <StackLayout Grid.Row="2">
+                <Button x:Name="btnRegister" 
+                            Text="Criar uma Conta" 
                             HorizontalOptions="Center" 
                             BackgroundColor="#1e84d0" 
                             TextColor="#FFF"
@@ -66,7 +65,15 @@
                             FontSize="Medium"
                             WidthRequest="350"
                             Clicked="SignUpProcedure"/>
-                </StackLayout>
-            </StackLayout>       
+            </StackLayout>
+            <StackLayout Padding="30">
+                <Label Text="Esqueci minha Senha"
+                       HorizontalOptions="Center"
+                       TextColor="#1e84d0"
+                       FontFamily="Calibri"
+                       FontSize="Subtitle"
+                       TextDecorations="Underline" />                
+            </StackLayout>
+        </StackLayout>       
     </ContentPage.Content>
 </ContentPage>
