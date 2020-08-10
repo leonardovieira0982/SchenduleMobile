@@ -34,9 +34,9 @@ namespace SchenduleApp.Views
                 MenuItems = new ObservableCollection<MainHomePageMasterMenuItem>(new[]
                 {
                     new MainHomePageMasterMenuItem { Id = 0, Title = "Agenda" },
-                    new MainHomePageMasterMenuItem { Id = 1, Title = "Meu Perfil" },
-                    new MainHomePageMasterMenuItem { Id = 2, Title = "Mensagem" },
-                    new MainHomePageMasterMenuItem { Id = 3, Title = "Configurações" },                    
+                    //new MainHomePageMasterMenuItem { Id = 1, Title = "Meu Perfil" },
+                    //new MainHomePageMasterMenuItem { Id = 2, Title = "Mensagem" },
+                    //new MainHomePageMasterMenuItem { Id = 3, Title = "Configurações" },                    
                 });
             }
 

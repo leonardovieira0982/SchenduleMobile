@@ -25,10 +25,15 @@ namespace SchenduleApp.Views
             if (item == null)
                 return;
 
-            var page = (Page)Activator.CreateInstance(item.TargetType);
-            page.Title = item.Title;
+            if (item.Title == "Agenda")
+            {
+               Detail = new NavigationPage(new Schendule());
+            }
+                
+            //var page = (Page)Activator.CreateInstance(item.TargetType);
+            //page.Title = item.Title;
 
-            Detail = new NavigationPage(page);
+            //Detail = new NavigationPage(page);
             IsPresented = false;
 
             MasterPage.ListView.SelectedItem = null;
